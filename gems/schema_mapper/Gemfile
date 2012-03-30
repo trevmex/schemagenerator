@@ -1,0 +1,9 @@
+source :rubygems
+
+gem "rest-client"
+gem "nokogiri"
+gem "activesupport"
+
+group :test do
+  gem 'rspec'
+end

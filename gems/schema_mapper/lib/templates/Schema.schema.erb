@@ -1,0 +1,3 @@
+<%= schema.type %> <%= "< #{schema.parent}" unless schema.parent.blank? %> {<% schema.properties.each do |name, info| %>
+  <%= "repeated " if name[-1] == 's' %><%= name %>: <%= info[:type] %><%= " // Specific Types: #{info[:specific_types]}" unless info[:specific_types].blank? %><% end unless schema.properties.blank? %>
+}
